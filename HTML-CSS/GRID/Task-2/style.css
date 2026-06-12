@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue";
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  min-height: 120vh;
+  width: 100%;
+  background-color: black;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1.4fr 1fr 1fr 1.2fr;
+
+  grid-template-areas:
+    "left-top center-1-top center-2-top right-top"
+    "left-top center-1-center center-1-center right-top"
+    "left-bottom center-1-center center-1-center right-center"
+    "left-bottom center-1-bottom center-2-bottom center-2-bottom";
+
+  padding: 20px 120px;
+  gap: 10px;
+}
+
+/* Cards */
+main > div {
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+main > div:hover {
+  transform: translateY(-5px);
+}
+
+/* Grid Areas */
+
+.left-top {
+  background-color: red;
+  grid-area: left-top;
+}
+
+.left-bottom {
+  background-color: burlywood;
+  grid-area: left-bottom;
+}
+
+.center-1-top {
+  background-color: blue;
+  grid-area: center-1-top;
+}
+
+.center-1-center {
+  background-color: chocolate;
+  grid-area: center-1-center;
+}
+
+.center-1-bottom {
+  background-color: coral;
+  grid-area: center-1-bottom;
+}
+
+.center-2-top {
+  background-color: rgb(6, 111, 6);
+  grid-area: center-2-top;
+}
+
+.center-2-bottom {
+  background-color: #d19999;
+  grid-area: center-2-bottom;
+}
+
+.right-top {
+  background-color: firebrick;
+  grid-area: right-top;
+}
+
+.right-center {
+  background-color: skyblue;
+  grid-area: right-center;
+}
+
+
+
+@media (max-width: 1024px) {
+  main {
+    padding: 20px 40px;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+
+    grid-template-areas:
+      "left-top center-1-top"
+      "left-top center-2-top"
+      "center-1-center center-1-center"
+      "left-bottom right-top"
+      "center-1-bottom right-center"
+      "center-2-bottom center-2-bottom";
+  }
+
+  main > div {
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 15px;
+
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "left-top"
+      "center-1-top"
+      "center-2-top"
+      "center-1-center"
+      "left-bottom"
+      "right-top"
+      "right-center"
+      "center-1-bottom"
+      "center-2-bottom";
+
+    gap: 15px;
+  }
+
+  main > div {
+    min-height: 220px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  main {
+    padding: 10px;
+    gap: 12px;
+  }
+
+  main > div {
+    min-height: 180px;
+    border-radius: 8px;
+  }
+}
