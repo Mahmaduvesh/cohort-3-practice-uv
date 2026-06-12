@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue';
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+.nav{
+    width: 100%;
+    height: 100px;
+    background-color: royalblue;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.part-1{
+    height: 50px;
+    width: 200px;
+    background-color: rgb(243, 103, 103);
+}
+
+.part-2{
+    height: 50px;
+    width: 60%;
+    background-color: rgb(142, 196, 240);
+}
+
+.center{
+    /* in this navbar height is 100px and footer height is 120px so minus it so center is perfcet  */
+    height:  calc(100vh - 100px - 120px);;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+        flex-wrap: wrap;
+
+}
+
+.left{
+    /* height: 500px; */
+    width: 40%;
+    background-color: rgb(5, 13, 37);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.center-part-1{
+    background-color: red;
+    width: 100%;
+    height: 300px;
+}
+
+.center-part-2{
+    background-color: rgb(14, 29, 128);
+    width: 100%;
+    height: 100px;
+}
+
+.right{
+    /* height: 500px; */
+    width: 60%;
+    background-color: rgb(84, 67, 67);
+}
+
+.footer{
+    width: 100%;
+    height: 120px;
+    background-color: royalblue;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.fpart-1{
+    background-color: rosybrown;
+    height: 80px;
+    width: 30%;
+}
+
+.fpart-2{
+    background-color: rosybrown;
+    height: 80px;
+    width: 30%;
+}
+
+.fpart-3{
+    background-color: rosybrown;
+    height: 80px;
+    width: 30%;
+}

@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="left-top">
+        <h3 class="card-title">Payment Method</h3>
+
+        <div class="payment-options">
+          <div class="method-row">
+            <div class="method-details">
+              <div class="card-logo mastercard">
+                <span class="circle red"></span>
+                <span class="circle orange"></span>
+              </div>
+              <div class="card-info">
+                <span class="card-number">**** **** **** 2172</span>
+                <span class="card-type">Mastercard</span>
+              </div>
+            </div>
+            <span class="chevron-down"></span>
+          </div>
+
+          <div class="method-row">
+            <div class="method-details">
+              <div class="card-logo visa">VISA</div>
+              <div class="card-info">
+                <span class="card-number">**** **** **** 2172</span>
+                <span class="card-type">Visa</span>
+              </div>
+            </div>
+            <span class="chevron-down"></span>
+          </div>
+
+          <div class="method-row">
+            <div class="method-details">
+              <div class="card-logo amex">AMEX</div>
+              <div class="card-info">
+                <span class="card-number">**** **** **** 2172</span>
+                <span class="card-type">American Express</span>
+              </div>
+            </div>
+            <span class="chevron-down"></span>
+          </div>
+        </div>
+
+        <button class="pay-btn">
+          Confirm to pay
+          <span class="arrow-right">→</span>
+        </button>
+      </div>
+
+      <div class="left-center">
+        <div class="icon-card">
+          <img src="./images/home-icon.png" alt="right-top-img" />
+        </div>
+        <div class="icon-card">
+          <img src="./images/calender-icon.png" alt="right-top-img" />
+        </div>
+        <div class="icon-card">
+          <img src="./images/website-icon.png" alt="right-top-img" />
+        </div>
+        <div class="icon-card">
+          <img src="./images/mobile-icon.png" alt="right-top-img" />
+        </div>
+      </div>
+
+      <div class="left-bottom">
+        <span class="meta-label">Stock Intelligence</span>
+        <img src="./images/stock.png" alt="stock" />
+        <div class="stock-amount">$92,020</div>
+      </div>
+
+      <div class="center-1-top">
+        <h2>
+          Smart <br />
+          Banking<br />Smart Living
+        </h2>
+        <div class="bell-icon">🔔</div>
+      </div>
+
+      <div class="center-1-bottom">
+        <img src="./images/img3.png" alt="right-top-img" />
+      </div>
+      
+      <div class="center-2-top">
+        <img src="./images/img2.png" alt="right-top-img" />
+      </div>
+
+      <div class="center-2-bottom organic-card">
+        <div class="organic-card__header">
+          <h3 class="organic-card__title">Organic Position</h3>
+
+          <div class="timeframe-select">
+            <span class="timeframe-select__label">TIMEFRAME</span>
+            <button type="button" class="timeframe-select__trigger">
+              <span>Today</span>
+              <span class="timeframe-select__icon" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="organic-card__metrics">
+          <div class="organic-card__value">
+            54<span class="organic-card__unit">%</span>
+          </div>
+          <div class="organic-card__context">Avg</div>
+        </div>
+
+        <div class="organic-card__chart-wrapper">
+          <img
+            src="./images/graph.png"
+            alt="Organic Position performance chart"
+            class="organic-card__chart-img"
+          />
+        </div>
+      </div>
+
+      <div class="right-top">
+        <div class="card-1">
+          <img src="./images/img1.png" alt="right-top-img" />
+        </div>
+        <div class="card-2">
+          <div class="card-content">
+            <span class="card-title">Total Ads</span>
+            <h2 class="card-value">725K</h2>
+            <div class="card-badge">
+              <span class="arrow-up">↑</span>
+              <span class="percentage">+15%</span>
+            </div>
+          </div>
+
+          <div class="card-graph-container">
+            <svg
+              viewBox="0 0 160 100"
+              class="trendline-svg"
+              preserveAspectRatio="none"
+            >
+              <defs>
+                <linearGradient id="graphGradient" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#41924b" stop-opacity="0.15" />
+                  <stop offset="100%" stop-color="#41924b" stop-opacity="0.0" />
+                </linearGradient>
+              </defs>
+              <path
+                d="M 0 90 Q 25 30 50 70 T 100 50 T 140 30 T 160 45 L 160 100 L 0 100 Z"
+                fill="url(#graphGradient)"
+              />
+              <path
+                d="M 0 90 Q 25 30 50 70 T 100 50 T 140 30 T 160 45"
+                fill="none"
+                stroke="#41924b"
+                stroke-width="2.5"
+                stroke-linecap="round"
+              />
+              <circle cx="100" cy="50" r="3" fill="#41924b" />
+            </svg>
+
+            <svg
+              class="floating-arrow"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#41924b"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="7" y1="17" x2="17" y2="7"></line>
+              <polyline points="7 7 17 7 17 17"></polyline>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
