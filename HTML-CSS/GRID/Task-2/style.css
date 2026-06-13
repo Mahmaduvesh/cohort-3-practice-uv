@@ -45,8 +45,14 @@ main > div:hover {
 /* Grid Areas */
 
 .left-top {
-  background-color: red;
+  background-color: #F5D6EE;
   grid-area: left-top;
+}
+
+.left-top img{
+    height: 100%;
+    width: 100%;
+    
 }
 
 .left-bottom {
