@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Helvetica Neue";
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 html,
@@ -12,14 +12,14 @@ body {
 }
 
 main {
-  min-height: 120vh;
+  min-height: 100vh;
   width: 100%;
   background-color: black;
 
   display: grid;
 
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1.4fr 1fr 1fr 1.2fr;
+  grid-template-rows: 30% 20% 20% 26%;
 
   grid-template-areas:
     "left-top center-1-top center-2-top right-top"
@@ -27,13 +27,12 @@ main {
     "left-bottom center-1-center center-1-center right-center"
     "left-bottom center-1-bottom center-2-bottom center-2-bottom";
 
-  padding: 20px 120px;
+  padding: 1% 240px;
   gap: 10px;
 }
 
 /* Cards */
 main > div {
-  border-radius: 12px;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -56,47 +55,391 @@ main > div:hover {
 }
 
 .left-bottom {
-  background-color: burlywood;
+  /* background-color: burlywood; */
   grid-area: left-bottom;
 }
 
-.center-1-top {
-  background-color: blue;
-  grid-area: center-1-top;
+.left-bottom {
+  background-color: #b7b4f5;
+  padding: 24px;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
+.agency-title {
+  background-color: #111111;
+  color: #f7fab8;
+  font-weight: 700;
+  font-size: 22px;
+  padding: 22px;
+  line-height: 1.2;
+  z-index: 2;
+  margin-bottom: 20px;
+}
+
+
+
+.agency-visuals {
+  flex-grow: 1;
+  position: relative;
+  width: 100%;
+}
+
+.img-wrapper {
+  overflow: hidden;
+  border: 4px solid #b7b4f5; /* Blends with bg to look like organic gaps */
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Specific Positions */
+.tall {
+  width: 45%;
+  height: 65%;
+  border-radius: 50px 50px 0 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.wide {
+  width: 45%;
+  height: 55%;
+  border-radius: 60px 60px 0 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.floating {
+  width: 20%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  position: absolute;
+  right: 25%;
+  top: 10%;
+}
+
+.micro-avatar {
+  width: 15%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
+  border: 3px solid white;
+}
+
+.center-1-top {
+  background-color: #4A9172;
+  grid-area: center-1-top;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;    
+  color: #f4fbb2;  
+}
+
+.center-1-top h2 {
+        font-size: 55px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+.center-1-top p {
+        font-size: 20px;
+        margin-top: auto;
+        opacity: 0.9;
+}     
+
+
 .center-1-center {
-  background-color: chocolate;
+  /* background-color: chocolate; */
   grid-area: center-1-center;
 }
 
+.center-1-center {
+  background-color: #e3dffd;
+  grid-area: center-1-center;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: sans-serif;
+}
+
+.rev-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.rev-badge {
+  background-color: #C3B5FE;
+  color: black;
+  padding: 12px 20px;
+  font-weight: 700;
+  max-width: 200px;
+  font-size: 18px;
+}
+
+.rev-data { text-align: right; }
+.rev-data h2 { font-size: 38px; margin: 0; }
+.rev-data p { font-size: 20px; display: flex; align-items: center; justify-content: flex-end; font-weight: bold; }
+
+.rev-chart-container { position: relative; margin-top: 20px; }
+
+.chart-tooltip {
+  background: #111424;
+  color: white;
+  padding: 10px 18px;
+  font-size: 16px;
+  position: absolute;
+  top: -20px;
+  left: 78px;
+}
+
+.chart-tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #111424;
+}
+
+.rev-svg { width: 100%; height: 80px; }
+
+.chart-labels {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
 .center-1-bottom {
-  background-color: coral;
+  /* background-color: coral; */
   grid-area: center-1-bottom;
 }
 
-.center-2-top {
-  background-color: rgb(6, 111, 6);
-  grid-area: center-2-top;
+.center-1-bottom {
+  background-color: #f4fbb2; /* Light yellow background */
+  padding: 24px;
+  grid-area: center-1-bottom;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+.center-1-bottom h3 {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.center-1-bottom p {
+  font-size: 16px;
+  margin: 8px 0 20px 0;
+}
+
+.swatch-container {
+  display: flex;
+  gap: 12px;
+}
+
+.swatch {
+  width: 40px;
+  height: 28px;
+  /* This creates the specific pill-corner shape */
+  border-radius: 8px; 
+}
+
+.center-2-top {
+  background-color: #6A6C6D;
+  grid-area: center-2-top;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;    
+  color: #f4fbb2; 
+}
+
+.center-2-top .label {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.center-2-top h2 {
+  font-size: 55px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.center-2-top .trend {
+  color: #08C706;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+
 .center-2-bottom {
-  background-color: #d19999;
+  /* background-color: #d19999; */
   grid-area: center-2-bottom;
 }
 
+.center-2-bottom {
+  background-color: #4A9172;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  height: 200px; /* Fixed height for the card */
+}
+
+.future-text {
+  background-color: #659a86;
+  padding: 24px;
+  border-radius: 20px;
+  max-width: 60%;
+}
+
+.future-text h2 {
+  color: #f7fab8;
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+}
+
+.future-text p {
+  color: #e0f2e9;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Concentric Circles Logic */
+
+
+
+
 .right-top {
-  background-color: firebrick;
+  /* background-color: firebrick; */
   grid-area: right-top;
 }
 
+.right-top {
+  background-color: #d1d4d6;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.pill-badge {
+  background-color: #f4fbb2;
+  padding: 12px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.avatar-stack {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-stack img, .plus-two {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #d1d4d6;
+  margin-left: -12px;
+}
+
+.plus-two {
+  background: #555;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.team-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: auto;
+}
+
+.client-info h3 { font-size: 14px; color: #555; margin: 0; }
+.client-info h2 { font-size: 56px; font-weight: 800; margin: 0; }
+.client-info .trend { color: #3d8c67; font-weight: bold; }
+
+.star-visual img {
+  width: 100px; /* Adjust size to fit your card */
+  height: auto;
+  filter: drop-shadow(4px 4px 0px rgba(0,0,0,0.1));
+}
+
 .right-center {
-  background-color: skyblue;
+  /* background-color: skyblue; */
   grid-area: right-center;
 }
 
 
+.right-center {
+  background-color: #FFFFFF; /* Matching the soft pink background */
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* Centers horizontally */
+  justify-content: center; /* Centers vertically */
+  height: 100%;
+  gap: 16px;              /* Space between image and text */
+}
 
+.logo-container {
+  width: 60px; /* Adjust based on your preferred icon size */
+  height: 60px;
+}
+
+.logo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-cubo h1 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #000000;
+  margin: 0;
+  letter-spacing: -1px;
+}
 @media (max-width: 1024px) {
   main {
     padding: 20px 40px;
@@ -152,6 +495,5 @@ main > div:hover {
 
   main > div {
     min-height: 180px;
-    border-radius: 8px;
   }
 }
